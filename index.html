@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood & Strain Tracker</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <h1>Mood & Strain Tracker</h1>
+
+      <form id="log-form">
+        <div class="form-group">
+          <label for="mood-select">Current Mood:</label>
+          <select id="mood-select" required>
+            <option value="" disabled selected>Select your mood</option>
+            <option value="Happy">Happy</option>
+            <option value="Calm">Calm</option>
+            <option value="Anxious">Anxious</option>
+            <option value="Tired">Tired</option>
+            <option value="Creative">Creative</option>
+            <option value="Sad">Sad</option>
+            <option value="Energetic">Energetic</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="strain-input">Strain (Optional):</label>
+          <input type="text" id="strain-input" placeholder="Enter strain name">
+        </div>
+
+        <button type="submit">Log Entry</button>
+      </form>
+
+      <h2>Recent Logs</h2>
+      <div id="logs-container">
+        <ul id="logs-list">
+          <!-- Log entries will be displayed here -->
+        </ul>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
